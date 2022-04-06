@@ -1,4 +1,4 @@
-name: Deploy Theme Oren Codes
+name: Deploy Theme The Geek Writer
 on:
   push:
     branches:
