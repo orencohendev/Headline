@@ -22,6 +22,9 @@
 
                 <h1 class="gh-cover-title">{{title}}</h1>
             </div>
+            {{#if feature_image_caption}}
+                <figcaption style="text-align: center;">{{feature_image_caption}}</figcaption>
+            {{/if}}
         </section>
     {{/if}}
 {{/post}}
