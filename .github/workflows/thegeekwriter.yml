@@ -9,11 +9,17 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-      - name: Find and Replace
+      - name: Find and Replace Hyvor Comments
         uses: jacobtomlinson/gha-find-replace@v2
         with:
           find: "HYVOR_TALK_WEBSITE_CODE"
           replace: ${{ secrets.THE_GEEK_WRITER_HYVOR_WEBSITE_KEY }}
+          regex: false
+      - name: Find and Replace Adsense Code
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "GOOGLE_ADSENSE_IDENTIFICATION"
+          replace: ${{ secrets.GOOGLE_ADSENSE_IDENTIFICATION }}
           regex: false
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
